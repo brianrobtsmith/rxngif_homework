@@ -1,0 +1,8 @@
+<h1>All Pictures</h1>
+
+<% @picture.each do |render| %>
+
+<img width="200" src="<%= render.source %>">
+<p><%= render.caption %></p>
+
+<% end %>
