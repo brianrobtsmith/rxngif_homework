@@ -8,10 +8,15 @@ class PicturesController < ApplicationController
   end
 
   def new
-   @picture = Picture.new
+
   end
 
   def create
+   p = Picture.new
+   p.caption = params[:caption]
+   p.source = params[:source]
+   p.save
+
   end
 
 end
