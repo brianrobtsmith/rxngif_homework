@@ -7,4 +7,11 @@ class PicturesController < ApplicationController
    @picture = Picture.all
   end
 
+  def new
+   @picture = Picture.new
+  end
+
+  def create
+  end
+
 end
