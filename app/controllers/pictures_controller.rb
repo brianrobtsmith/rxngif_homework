@@ -25,6 +25,17 @@ class PicturesController < ApplicationController
   end
 
   def edit
+   @p = Picture.find(params[:id])
+   @caption = @p.caption
+   @source = @p.source
+   @id = params[:id]
+  end
+
+  def update
+   p = Picture.find(params[:id])
+   p.caption = params[:caption]
+   p.source = params[:source]
+   p.save
   end
 
 
