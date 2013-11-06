@@ -1,8 +1,7 @@
 <h1>All Pictures</h1>
 
-<% @picture.each do |render| %>
-
-<img width="200" src="<%= render.source %>">
-<p><%= render.caption %></p>
-
+<% @all_pictures.each do |pic| %>
+ <a href="http://localhost:3000/picture_details/<%= pic.id %>">
+  <img width="200" src="<%= pic.source %>"> </a>
+  <p><%= pic.caption %></p>
 <% end %>
