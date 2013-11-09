@@ -9,7 +9,7 @@ Rxngif::Application.routes.draw do
 
  # UPDATE
   get("/edit_picture_form/:id", { :controller => "pictures", :action => "edit" })
-  get("/update_picture/:id", { :controller => "pictures", :action => "update" })
+  post("/update_picture/:id", { :controller => "pictures", :action => "update" })
 
  # DELETE
   get("/delete_picture/:id", { :controller => "pictures", :action => "destroy" })
