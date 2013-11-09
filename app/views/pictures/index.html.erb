@@ -2,7 +2,7 @@
 
 <% @all_pictures.each do |pic| %>
  <a href="http://localhost:3000/picture_details/<%= pic.id %>">
-  <img width="200" src="<%= pic.source %>"> </a>
+  <%= image_tag(pic.source, :width => 200) %></a>
   <p><%= pic.caption %></p>
   <p><a href="http://localhost:3000/picture_details/<%= pic.id %>">Show</a></p>
   <p><a href="http://localhost:3000/edit_picture_form/<%= pic.id %>">Edit</a></p>
