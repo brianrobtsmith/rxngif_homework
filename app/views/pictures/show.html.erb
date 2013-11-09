@@ -1,7 +1,12 @@
 <h1>Picture Details ID# <%= @picture.id %></h1>
 
-<a href="http://localhost:3000/delete_picture/<%= @picture.id %>">Delete this picture</a>
 
+<%= image_tag(@picture.source, :width => 480) %>
 <img width="200" src="<%= @picture.source %>">
 <p><%= @picture.caption %></p>
+
+<% link_to("Delete this picture", "http://localhost:3000/delete_picture/#{@picture.id}")   %>
+<p><a href="http://localhost:3000/delete_picture/<%= @picture.id %>">Delete this picture</a></p>
+<p><a href="http://localhost:3000/all_pictures">Go back to the list of all pictures</a></p>
+<p><a href="http://localhost:3000/edit_picture_form/<%= @picture.id %>">Edit this picture</a></p>
 
