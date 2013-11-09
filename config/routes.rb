@@ -1,7 +1,7 @@
 Rxngif::Application.routes.draw do
  # CREATE
   get("/new_picture_form", { :controller => "pictures", :action => "new", :as => "new_picture" })
-  get("/create_picture", { :controller => "pictures", :action => "create" })
+  post("/create_picture", { :controller => "pictures", :action => "create" })
 
   # READ
   get("/picture_details/:id", { :controller => "pictures", :action => "show" })
@@ -12,6 +12,6 @@ Rxngif::Application.routes.draw do
   get("/update_picture/:id", { :controller => "pictures", :action => "update" })
 
  # DELETE
-  delete("/delete_picture/:id", { :controller => "pictures", :action => "destroy" })
+  get("/delete_picture/:id", { :controller => "pictures", :action => "destroy" })
 
 end
