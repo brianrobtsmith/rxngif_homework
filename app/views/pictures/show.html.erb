@@ -5,7 +5,7 @@
 
 <p><%= @picture.caption %></p>
 
-<p><%= link_to("Delete this picture", "http://localhost:3000/delete_picture/#{@picture.id}")   %></p>
-<p><%= link_to("Go back to the list of all pictures", "http://localhost:3000/all_pictures") %></p>
-<p><%= link_to("Edit this picture", "http://localhost:3000/edit_picture_form/#{@picture.id}")%>"</p>
+<p><%= link_to 'Delete this picture', picture_url(@picture.id)   %></p>
+<p><%= link_to 'Go back to the list of all pictures', pictures_url %></p>
+<p><%= link_to 'Edit this picture', edit_picture_url(@picture.id) %>"</p>
 
